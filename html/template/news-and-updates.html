@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - News & Updates</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../Frontend/css/styles.css">
+  <link rel="stylesheet" href="../../Frontend/css/transition.css">
+  <link rel="stylesheet" href="../../Frontend/css/animation.css">
+  <link rel="stylesheet" href="../../Frontend/css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = 'news';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">NEWS &amp; UPDATES</h1>
+        <p class="page-hero-subtitle">Transparency-driven announcements, advisories, and public information.</p>
+      </div>
+    </section>
+
+    <!-- Content Tabs -->
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <!-- Main Content -->
+      <main class="main-content">
+        <section class="card news-section">
+          <h2 class="section-title">News and Updates</h2>
+          <div class="news-lead">
+            <div class="news-lead-text">
+              <p>
+                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been
+                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book.
+              </p>
+              <p>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages.
+              </p>
+            </div>
+            <div class="news-lead-media" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="card updates-section">
+          <h2 class="section-title">Other Updates</h2>
+          <div class="updates-grid">
+            <a href="#" class="update-card">
+              <div class="update-thumb update-thumb--green"></div>
+              <div class="update-body">
+                <div class="update-title">Announcement Title</div>
+                <div class="update-meta">Mar 11, 2026</div>
+              </div>
+            </a>
+            <a href="#" class="update-card">
+              <div class="update-thumb update-thumb--teal"></div>
+              <div class="update-body">
+                <div class="update-title">Advisory Title</div>
+                <div class="update-meta">Mar 10, 2026</div>
+              </div>
+            </a>
+            <a href="#" class="update-card">
+              <div class="update-thumb update-thumb--red"></div>
+              <div class="update-body">
+                <div class="update-title">Public Notice</div>
+                <div class="update-meta">Mar 09, 2026</div>
+              </div>
+            </a>
+
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder update"></a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget widget-time card">
+          <div class="time-display">{{ currentTime }}</div>
+          <div class="date-display">{{ currentDate }}</div>
+          <i class="fas fa-calendar-alt date-icon"></i>
+        </div>
+        <div class="widget widget-office-directory card">
+          <h3 class="widget-title">Office Directory</h3>
+          <ul class="office-directory-list">
+            <li><a href="#" class="office-link"><span>Mayor's Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Accounting Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Agriculture Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Assessor's Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Budget Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Civil Registrar</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>CADRRESMO</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Engineering Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Health Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Human Resource Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>MSWDO</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>MPDC</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Treasurer's Office</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="office-link"><span>Tourism</span><i class="fas fa-chevron-right office-link-icon" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="widget widget-weather card">
+          <h3 class="widget-title">Weather Forecast</h3>
+          <p class="weather-location">{{ weather.location }}</p>
+          <div class="weather-current">
+            <i :class="weather.icon" class="weather-icon"></i>
+            <span class="weather-temp">{{ weather.temp }}°</span>
+          </div>
+          <p class="weather-detail">{{ weather.humidity }} - {{ weather.winds }}</p>
+          <div class="weather-forecast">
+            <div v-for="day in weather.days" :key="day.label" class="forecast-day">
+              <i :class="day.icon" class="forecast-icon"></i>
+              <span>{{ day.label }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="widget widget-calendar card">
+          <h3 class="widget-title">Calendar</h3>
+          <div class="calendar-nav">
+            <button type="button" @click="prevMonth" aria-label="Previous month"><i class="fas fa-chevron-left"></i></button>
+            <span>{{ calendarLabel }}</span>
+            <button type="button" @click="nextMonth" aria-label="Next month"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="calendar-grid">
+            <div v-for="d in calendarDayLabels" :key="d" class="calendar-day-label">{{ d }}</div>
+            <div v-for="d in calendarDays" :key="d.value" class="calendar-day" :class="{ other: d.other, today: d.today }">{{ d.label }}</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../Frontend/js/header_footer.js"></script>
+</body>
+</html>
+

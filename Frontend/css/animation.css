@@ -1,0 +1,35 @@
+/* Animation-only styles (separate from styles.css) */
+
+.hero-title {
+  animation: heroFadeUp 600ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-desc {
+  animation: heroFadeUp 650ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: 90ms;
+}
+
+.hero-actions {
+  animation: heroFadeUp 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: 160ms;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-desc,
+  .hero-actions {
+    animation: none;
+  }
+}
+

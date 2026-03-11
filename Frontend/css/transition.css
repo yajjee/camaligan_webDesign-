@@ -1,0 +1,29 @@
+/* Smooth page transition (fade) */
+
+/* Keep existing behavior: hide until Vue mounts */
+body.loading #app {
+  visibility: hidden;
+}
+
+/* Fade animation */
+#app {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+/* Start state for fade-in (set by header_footer.js) */
+body.page-enter #app {
+  opacity: .1;
+}
+
+/* Fade-out before navigating away (set by header_footer.js) */
+body.page-leave #app {
+  opacity: .3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #app {
+    transition: none;
+  }
+}
+
