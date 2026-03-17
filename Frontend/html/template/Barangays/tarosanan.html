@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Brgy. Tarosanan</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/styles.css">
+  <link rel="stylesheet" href="../../../css/transition.css">
+  <link rel="stylesheet" href="../../../css/animation.css">
+  <link rel="stylesheet" href="../../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">BARANGAY PROFILE</h1>
+        <p class="page-hero-subtitle">Brgy. Tarosanan, Camaligan, Camarines Sur</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="../news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="../events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="../tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="../gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card page-banner">
+          <h2 class="page-banner-title">Profile of Barangay</h2>
+        </section>
+
+        <section class="card">
+          <div class="news-lead">
+            <div class="news-lead-text">
+              <p class="dropcap">
+                Replace this section with the official profile of <strong>Brgy. Tarosanan</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Origin of the name</h2>
+          <p class="dropcap">
+            Add the origin story / etymology of <strong>Brgy. Tarosanan</strong> here.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Demographic Profile</h2>
+          <p>
+            Add demographic information here.
+          </p>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../../js/header_footer.js"></script>
+</body>
+</html>

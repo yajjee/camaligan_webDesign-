@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Mission, Vision &amp; Service Pledge</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">MISSION, VISION &amp; SERVICE PLEDGE</h1>
+        <p class="page-hero-subtitle">Our guiding principles in serving the people of Camaligan.</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card">
+          <h2 class="section-title">Our Mission</h2>
+          <div class="news-lead">
+            <div class="news-lead-text">
+              <p>
+                The Local Government Unit of Camaligan delivers responsive, transparent public service and manages
+                resources to uplift the well-being of our people.
+              </p>
+              <ul>
+                <li>Service excellence and fast, efficient transactions.</li>
+                <li>Capacity-building and shared knowledge.</li>
+                <li>Program planning and rational use of funds.</li>
+                <li>Linkages with partners and stakeholders.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Our Vision</h2>
+          <p>
+            Camaligan, a significant heritage, settlement and tourism destination in the province—where empowered
+            Camaligueños and a progressive economy thrive in a well-planned, ecologically balanced, and safe environment
+            governed by honest and competent leaders.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Our Service Pledge</h2>
+          <p>We commit to:</p>
+          <ul>
+            <li>Create an enjoyable day-to-day transaction that will make the people comfortable.</li>
+            <li>Attend to all applications and requests within the premises of the office prior to lunch break and end of office hours.</li>
+            <li>Make sure our service exceeds expectations and performs our best to make service more reliable.</li>
+            <li>Always respect our clients and use their opinions as inspiration to continuously improve our services.</li>
+            <li>Initiate a high level of transparency and openness in providing accessible, accurate and reasonable information.</li>
+            <li>Guide the people in every transaction from start to finish.</li>
+            <li>Abide by the law and offer services fairly and responsibly without any bias.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+        <div class="widget widget-news card">
+          <h3 class="widget-title">Latest News and Announcements</h3>
+          <div class="widget-placeholder">
+            <template v-if="latestNews.length">
+              <a v-for="n in latestNews" :key="n.id" :href="n.url" class="news-item">{{ n.title }}</a>
+            </template>
+            <span v-else>No news yet.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>
+

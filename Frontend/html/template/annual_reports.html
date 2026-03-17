@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Annual Reports</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">ANNUAL REPORTS</h1>
+        <p class="page-hero-subtitle">Financial and performance reports of the Municipality of Camaligan.</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card section-ordinances">
+          <h2 class="section-title">Annual Reports Timeline</h2>
+          <p>
+            Browse the municipality's annual reports in chronological order. Replace the sample entries below
+            with links to your actual PDF files or report pages.
+          </p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-body">
+                <h3>Annual Report 2025</h3>
+                <p>Audited financial statements, accomplishments, and major projects for the year 2025.</p>
+                <a href="#" class="link-more">Download PDF</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-body">
+                <h3>Annual Report 2024</h3>
+                <p>Summary of LGU programs, expenditures, and key performance indicators for 2024.</p>
+                <a href="#" class="link-more">Download PDF</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-body">
+                <h3>Annual Report 2023</h3>
+                <p>Previous year report. Add more years here as needed.</p>
+                <a href="#" class="link-more">Download PDF</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>
+

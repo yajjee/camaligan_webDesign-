@@ -1,5 +1,7 @@
 /* Animation-only styles (separate from styles.css) */
 
+/* Header/footer animation removed (use white overlay fade instead) */
+
 .hero-title {
   animation: heroFadeUp 600ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }

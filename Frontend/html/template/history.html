@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - History</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">HISTORY</h1>
+        <p class="page-hero-subtitle">A brief background of Camaligan and its heritage.</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card page-banner">
+          <h2 class="page-banner-title">History of Camaligan</h2>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Overview</h2>
+          <p class="dropcap">
+            Camaligan is one of the oldest settlements in the Bicol Region, known for its riverside communities, rich
+            traditions, and enduring heritage. This page serves as a placeholder template—replace the sections below with
+            your official historical narrative, key dates, and references.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Key Milestones</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">1579</div>
+              <div class="timeline-body">
+                <h3>Early settlement</h3>
+                <p>Camaligan’s early community life along the river and nearby trade routes.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">1900s</div>
+              <div class="timeline-body">
+                <h3>Town development</h3>
+                <p>Growth of civic institutions, education, and public services.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">Today</div>
+              <div class="timeline-body">
+                <h3>Heritage and progress</h3>
+                <p>Continuing preservation initiatives and community-led development.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Culture and Heritage</h2>
+          <p>
+            Add content about local traditions, festivals, notable sites, and the town’s contributions to the region’s history.
+          </p>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>

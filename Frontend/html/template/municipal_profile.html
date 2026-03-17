@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Municipal Profile</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay-left">
+        <img src="../../../assets/logo.png" alt="Camaligan Logo" class="hero-logo">
+      </div>
+      <div class="hero-content">
+        <span class="hero-badge">ESTABLISHED 1579 | BICOL REGION'S OLDEST PRE-COLONIAL SITE</span>
+        <h1 class="hero-title">Dagos po sa <span class="hero-title-accent">Camaligan</span></h1>
+        <p class="hero-desc">Talay po kayo sa aming Munting Bayan. The Municipality of Camaligan, home town to warm people, rich heritage, and a government committed to transparent, responsive public service.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary">GOVERNMENT SERVICES</button>
+          <button class="btn btn-outline">DISCOVER OUR TOWN</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card page-banner">
+          <h2 class="page-banner-title">Municipal Profile</h2>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Geographical Location</h2>
+          <p>
+            Camaligan is the smallest municipality not only in Camarines Sur but in Bicol Region in terms of land area.
+            It is situated along the Bicol River, landlocked, and is about two (2) kilometers from Naga City. The
+            Municipality is located at geographical coordinates 13°36’ to 7°38’ North latitude and 123°08’ to 123°11’
+            East longitude. It is bounded on the south by the Municipality of Gainza; on the north, by the municipality
+            of Canaman and on its eastern side by Naga City. Camaligan has a total land area of 468.1370 hectares or
+            4,681,370 square meters comprising of thirteen (13) Barangays based from the Camaligan statused in 2017 by
+            the Department of Environment and Natural Resources. It comprises 0.009% of the Province of Camarines Sur’s
+            land area of 5,502 square kilometer. It is 5.55% of that land area in comparison to Naga City. About one –
+            third (1/3) of that is its neighboring Municipality of Gainza and a tenth (1/10) of the Municipality of
+            Canaman.
+          </p>
+        </section>
+
+        <section class="card section-visit">
+          <h2 class="section-title">Map</h2>
+          <div class="map-placeholder">
+            <i class="fas fa-map-marker-alt map-icon"></i>
+            <button class="btn btn-primary" @click="openMap">Open Map</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Topography and Slope Suitability</h2>
+          <p class="dropcap">
+            The Municipality has only one type of topographic relief. A flat lowland with a slope of 0–3% and a floodplain
+            where additional water from Naga River converges at the Bicol River portion of the Municipality.
+          </p>
+          <p class="dropcap">
+            Agriculture and built-up areas for settlement, social services and various economic activities are thus its
+            major land uses. Agricultural land which comprises 89% of the total land area us swampy during the rainy season.
+            Thus limits its capacity for rice or vegetable production. Settlement area comprises the 11% of the Municipality’s
+            total land area. These are now densely populated due to its proximity to Naga City.
+          </p>
+          <p class="dropcap">
+            The Bicol River that traverses the Municipality serves for small fishing, irrigation of farmlands as well as
+            transport system of barangays at the other side of the River particularly San Francisco and Tarosanan. The River
+            itself serves as access of the Municipality to the vast fishing ground of San Miguel Bay.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Climate and Rainfall</h2>
+          <p class="dropcap">
+            The Municipality belongs to the second distinct type of climate which is characterized by the absence of dry
+            season with a very pronounced rainfall. The amount of precipitation in the area is similar to the province’s
+            average which is highest during the months of October, November and December at 301.22mm, 284.3mm and 228.3mm,
+            respectively. The average monthly precipitation recorded from January to December of the years from 1976 to 2013.
+          </p>
+          <p class="dropcap">
+            The smallest volume of rainfall recorded was in March 1979 while the highest rainfall amount was in May 2011.
+            The same year in 2011 where the total annual volume of rainfall recorded was higher at 3,617 mm while the lowest
+            recorded was in 1977 with a total volume of 1,556 mm. The trend of precipitation shows that the rainy season
+            starts in May and peaks from July to October and recedes sharply from November to January. The lowest of the
+            precipitation rate is in April. Given the cyclic nature of monthly rainfall distribution, the amount of rainfall
+            and water level at the Camaligan Station of PAGASA were analyzed. The latest year with complete record is in year
+            2010. Maximum rainfall amount and water depth is recorded in November at 125mm and water level of 3.58m above mean
+            sea level (AMSL). This barely exceeded the maximum level of 3.5m AMSL at the Camaligan Rainfall and Water Level
+            Gauging Station of PAGASA. Maximum rainfall usually occurs from July to September. The municipality’s annual
+            rainfall is 2,546 mm with a peak of 459 mm in August and low of 27 mm in February.
+          </p>
+          <p class="dropcap">
+            The most common air currents in the area are in the northern winds or “Aihan” which prevails from September to
+            January, strong monsoon or “Habagat” in August, and the Northeast and Southeast monsoon during the rest of the
+            months. As seen in the geographical location of the municipality, it is prone to destructive typhoons that occur
+            anytime of the year particularly when the prevailing wind is from the north to the northeast or northwest. The
+            month of May is considered the hottest month in the area with an approximate temperature of 33.6°C, while the
+            coldest month is January with a temperature of 20.8°C.
+          </p>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+        <div class="widget widget-news card">
+          <h3 class="widget-title">Latest News and Announcements</h3>
+          <div class="widget-placeholder">
+            <template v-if="latestNews.length">
+              <a v-for="n in latestNews" :key="n.id" :href="n.url" class="news-item">{{ n.title }}</a>
+            </template>
+            <span v-else>No news yet.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>

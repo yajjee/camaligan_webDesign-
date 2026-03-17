@@ -72,6 +72,16 @@ function mountApp() {
       ]
     },
     computed: {
+      // Filter ordinances by selected category; used on the main page.
+      filteredOrdinanceItems: function () {
+        var cat = this.selectedOrdinanceCat;
+        if (!this.ordinanceItems || !this.ordinanceItems.length) return [];
+        if (!cat) return this.ordinanceItems;
+        // If items don't have category yet, just return all.
+        return this.ordinanceItems.filter(function (it) {
+          return !it.category || it.category === cat;
+        });
+      },
       calendarLabel: function () {
         var m = this.calendarMonth;
         var names = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -202,6 +212,14 @@ function mountApp() {
           }
 
           if (url.origin !== window.location.origin) return;
+
+          // Same-page top link (e.g., Home while already on main page).
+          if ((!url.hash || url.hash === '#') && url.pathname === window.location.pathname) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+
           if (!url.hash || url.hash === '#') return;
           if (url.pathname !== window.location.pathname) return;
 

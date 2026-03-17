@@ -25,9 +25,16 @@ body {
   background: var(--bg-light);
 }
 
-/* Prevent flicker until header/footer are injected and Vue has mounted */
+/* Reserve header space before core header.html is injected so it doesn't "pop in" late */
+#header-placeholder {
+  display: block;
+  height: 64px;              /* approximate header height */
+  background: var(--teal);   /* same color as real header */
+}
+
+/* Keep content visible on load (avoid white screen). */
 body.loading #app {
-  visibility: hidden;
+  visibility: visible;
 }
 
 /* Header */
@@ -133,9 +140,10 @@ body.loading #app {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 240px;
+  min-width: 200px;
+  max-width: 260px;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.35rem 0;
   list-style: none;
   background: var(--white);
   border-radius: 6px;
@@ -157,11 +165,12 @@ body.loading #app {
 
 .nav-dropdown-item {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.42rem 0.85rem;
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.2;
 }
 
 .nav-dropdown-item:hover {
@@ -182,7 +191,7 @@ body.loading #app {
 }
 
 .nav-submenu-caret {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   opacity: 0.8;
 }
 
@@ -190,9 +199,10 @@ body.loading #app {
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 260px;
+  min-width: 220px;
+  max-width: 280px;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.35rem 0;
   list-style: none;
   background: var(--white);
   border-radius: 6px;

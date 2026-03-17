@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Events</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = 'events';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">EVENTS</h1>
+        <p class="page-hero-subtitle">Upcoming activities and community happenings in Camaligan.</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card">
+          <h2 class="section-title">Featured Event</h2>
+          <div class="news-lead">
+            <div class="news-lead-text">
+              <p>Add your event description here. You can list schedules, venues, and registration details.</p>
+              <p>This page is separate from the homepage and can be expanded later with real event cards.</p>
+            </div>
+            <div class="news-lead-media" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">More Events</h2>
+          <div class="updates-grid">
+            <a href="#" class="update-card">
+              <div class="update-thumb update-thumb--teal"></div>
+              <div class="update-body">
+                <div class="update-title">Event Title</div>
+                <div class="update-meta">Date • Location</div>
+              </div>
+            </a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder event"></a>
+            <a href="#" class="update-card update-card--placeholder" aria-label="Placeholder event"></a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>
+

@@ -1,29 +1,134 @@
 /* Smooth page transition (fade) */
 
-/* Keep existing behavior: hide until Vue mounts */
+/* Keep the app always visible; only change opacity for transitions. */
 body.loading #app {
-  visibility: hidden;
+  visibility: visible;
 }
 
-/* Fade animation */
+/* No page-level fade (prevents white flicker on full reloads) */
 #app {
   opacity: 1;
-  transition: opacity 300ms ease;
+  transition: none; /* disable page-level fade to avoid flicker */
 }
 
-/* Start state for fade-in (set by header_footer.js) */
-body.page-enter #app {
-  opacity: .1;
+/* White fade overlay for page transitions (CSS-only, avoids DOM pop-in) */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
 }
 
-/* Fade-out before navigating away (set by header_footer.js) */
-body.page-leave #app {
-  opacity: .3;
+/* When ready, enable smooth opacity transitions */
+.is-fade-ready::before {
+  transition: opacity 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade in to white during navigation; fade out on load */
+.is-fading::before {
+  opacity: 1;
+}
+
+/* Smooth scrolling (works for normal anchor jumps; JS also handles some cases) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Unified interaction transitions (no layout shifts, just polish) */
+:root {
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-quick: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 150ms;
+  --t-med: 220ms;
+  --t-slow: 320ms;
+}
+
+/* Links */
+a,
+.nav-link,
+.nav-dropdown-item,
+.link-more,
+.connect-link,
+.news-item {
+  transition: color var(--t-fast) ease, opacity var(--t-fast) ease, background-color var(--t-fast) ease;
+}
+
+/* Buttons + inputs */
+button,
+.btn,
+.btn-profile,
+.calendar-nav button,
+.ordinance-cat,
+.search-input {
+  transition:
+    background-color var(--t-fast) ease,
+    border-color var(--t-fast) ease,
+    color var(--t-fast) ease,
+    box-shadow var(--t-med) ease,
+    transform var(--t-fast) var(--ease-quick);
+}
+
+button:active,
+.btn:active,
+.calendar-nav button:active {
+  transform: scale(0.98);
+}
+
+/* Cards */
+.card,
+.contact-card {
+  transition: box-shadow var(--t-slow) ease, transform var(--t-slow) ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+  box-shadow: 0 2px 8px rgba(14, 47, 59, 0.12);
+}
+
+/* Tabs */
+.tab {
+  transition: color var(--t-med) ease, border-color var(--t-med) ease;
+}
+
+/* Dropdown menus (smooth open/close; uses existing hover logic in styles.css) */
+.nav-dropdown-menu,
+.nav-submenu-menu {
+  transition: opacity var(--t-med) ease, transform var(--t-med) var(--ease-standard), visibility var(--t-med) ease;
+  will-change: opacity, transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #app {
-    transition: none;
+  html { scroll-behavior: auto; }
+  .is-fade-ready #page-fade-overlay { transition: none !important; }
+  a,
+  .nav-link,
+  .nav-dropdown-item,
+  .link-more,
+  .connect-link,
+  .news-item,
+  button,
+  .btn,
+  .btn-profile,
+  .calendar-nav button,
+  .ordinance-cat,
+  .search-input,
+  .card,
+  .contact-card,
+  .tab,
+  .nav-dropdown-menu,
+  .nav-submenu-menu {
+    transition: none !important;
+  }
+  button:active,
+  .btn:active,
+  .calendar-nav button:active {
+    transform: none !important;
   }
 }
 

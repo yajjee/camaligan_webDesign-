@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVPH - Barangay Profile and their History</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/transition.css">
+  <link rel="stylesheet" href="../../css/animation.css">
+  <link rel="stylesheet" href="../../css/news.css">
+</head>
+<body class="loading">
+  <script>window.__ACTIVE_TAB = '';</script>
+  <div id="app">
+    <div id="header-placeholder"></div>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1 class="page-hero-title">BARANGAY PROFILE AND THEIR HISTORY</h1>
+        <p class="page-hero-subtitle">Profiles of Camaligan’s barangays and their historical background.</p>
+      </div>
+    </section>
+
+    <div class="content-tabs">
+      <a class="tab" :class="{ active: activeTab === 'news' }" href="news-and-updates.html">NEWS AND UPDATE</a>
+      <a class="tab" :class="{ active: activeTab === 'events' }" href="events.html">EVENTS</a>
+      <a class="tab" :class="{ active: activeTab === 'tourism' }" href="tourism.html">TOURISM</a>
+      <a class="tab" :class="{ active: activeTab === 'gallery' }" href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="main-wrap">
+      <main class="main-content">
+        <section class="card page-banner">
+          <h2 class="page-banner-title">Barangay Profiles</h2>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Overview</h2>
+          <p class="dropcap">
+            Use this page to present each barangay’s profile—population, land area, key landmarks—and a short history.
+            The sample layout below groups barangays in a simple list you can replace with real data.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">List of Barangays</h2>
+          <div class="barangay-list">
+            <article class="barangay-item" id="dugcal">
+              <h3>Brgy. Dugcal</h3>
+              <p>Replace this text with Dugcal’s official profile and historical notes.</p>
+            </article>
+            <article class="barangay-item" id="marupit">
+              <h3>Brgy. Marupit</h3>
+              <p>Replace this text with Marupit’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-francisco">
+              <h3>Brgy. San Francisco</h3>
+              <p>Replace this text with San Francisco’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-jose-san-pablo">
+              <h3>Brgy. San Jose-San Pablo</h3>
+              <p>Replace this text with San Jose-San Pablo’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-juan-san-ramon">
+              <h3>Brgy. San Juan-San Ramon</h3>
+              <p>Replace this text with San Juan-San Ramon’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-lucas">
+              <h3>Brgy. San Lucas</h3>
+              <p>Replace this text with San Lucas’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-marcos">
+              <h3>Brgy. San Marcos</h3>
+              <p>Replace this text with San Marcos’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-mateo">
+              <h3>Brgy. San Mateo</h3>
+              <p>Replace this text with San Mateo’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="san-roque">
+              <h3>Brgy. San Roque</h3>
+              <p>Replace this text with San Roque’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="santo-domingo">
+              <h3>Brgy. Santo Domingo</h3>
+              <p>Replace this text with Santo Domingo’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="santo-tomas">
+              <h3>Brgy. Santo Tomas</h3>
+              <p>Replace this text with Santo Tomas’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="sua">
+              <h3>Brgy. Sua</h3>
+              <p>Replace this text with Sua’s profile and history.</p>
+            </article>
+            <article class="barangay-item" id="tarosanan">
+              <h3>Brgy. Tarosanan</h3>
+              <p>Replace this text with Tarosanan’s profile and history.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div id="sidebar-widgets-placeholder"></div>
+      </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../../js/header_footer.js"></script>
+</body>
+</html>

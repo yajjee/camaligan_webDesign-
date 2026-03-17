@@ -1,0 +1,34 @@
+<div class="widget widget-time card">
+  <div class="time-display">{{ currentTime }}</div>
+  <div class="date-display">{{ currentDate }}</div>
+  <i class="fas fa-calendar-alt date-icon"></i>
+</div>
+
+<div class="widget widget-weather card">
+  <h3 class="widget-title">Weather Forecast</h3>
+  <p class="weather-location">{{ weather.location }}</p>
+  <div class="weather-current">
+    <i :class="weather.icon" class="weather-icon"></i>
+    <span class="weather-temp">{{ weather.temp }}°</span>
+  </div>
+  <p class="weather-detail">{{ weather.humidity }} - {{ weather.winds }}</p>
+  <div class="weather-forecast">
+    <div v-for="day in weather.days" :key="day.label" class="forecast-day">
+      <i :class="day.icon" class="forecast-icon"></i>
+      <span>{{ day.label }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="widget widget-calendar card">
+  <h3 class="widget-title">Calendar</h3>
+  <div class="calendar-nav">
+    <button type="button" @click="prevMonth" aria-label="Previous month"><i class="fas fa-chevron-left"></i></button>
+    <span>{{ calendarLabel }}</span>
+    <button type="button" @click="nextMonth" aria-label="Next month"><i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="calendar-grid">
+    <div v-for="d in calendarDayLabels" :key="d" class="calendar-day-label">{{ d }}</div>
+    <div v-for="d in calendarDays" :key="d.value" class="calendar-day" :class="{ other: d.other, today: d.today }">{{ d.label }}</div>
+  </div>
+</div>
